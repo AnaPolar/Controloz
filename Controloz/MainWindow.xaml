@@ -1,0 +1,47 @@
+﻿<Window x:Class="Controloz.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Controloz"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+        <!-- Columna izquierda con la imagen -->
+        <ColumnDefinition Width="*" />
+        <!-- Columna derecha con el contenido -->
+        <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Image Source="Images/bg_login.jpg" Stretch="UniformToFill" Grid.Column="0" />
+
+        <Grid Grid.Column="1">
+            <!-- Definir filas para el contenido -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- Logo -->
+            <Image Source="Images/controloz logo.png" Width="100" Height="100" HorizontalAlignment="Center" Margin="0,20,0,0" />
+
+            <!-- Etiqueta y entrada para el nombre -->
+            <StackPanel Grid.Row="1" Margin="20,20,20,0">
+                <Label Content="Nombre:" />
+                <TextBox Name="txtNombre" />
+            </StackPanel>
+
+            <!-- Etiqueta y entrada para la contraseña -->
+            <StackPanel Grid.Row="2" Margin="20,10,20,0">
+                <Label Content="Contraseña:" />
+                <PasswordBox Name="txtContraseña" />
+            </StackPanel>
+
+            <!-- Botón de inicio de sesión -->
+            <Button Grid.Row="3" Content="Iniciar Sesión" Width="100" Height="30" HorizontalAlignment="Center" Margin="0,20,0,0" Click="LoginClick"/>
+        </Grid>
+    </Grid>
+</Window>

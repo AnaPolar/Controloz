@@ -1,0 +1,46 @@
+<Window x:Class="Controloz.MainMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:Controloz"
+        mc:Ignorable="d"
+        Title="MainMenu" Height="450" Width="800" ResizeMode="NoResize">
+    <Grid>
+        <!-- Fondo de la ventana con la imagen -->
+        <Image Source="RutaDeTuImagenDeFondo.jpg" Stretch="UniformToFill"/>
+
+        <!-- Contenido de la ventana -->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/> <!-- Menú deslizante -->
+                <ColumnDefinition Width="*"/>    <!-- Contenido específico de la ventana -->
+            </Grid.ColumnDefinitions>
+
+            <!-- Menú deslizante -->
+            <Grid Name="menuGrid" Width="200" Background="#2C3E50" VerticalAlignment="Stretch">
+                <!-- Contenido del menú aquí -->
+                <Button Content="Catálogos" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,40,0,0" Click="CatalogosClick" Background="Transparent" BorderThickness="0" Foreground="Azure" FontWeight="Bold"/>
+                <Button Content="Registros" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,80,0,0" Click="RegistrosClick" Background="Transparent" BorderThickness="0" Foreground="Azure" FontWeight="Bold"/>
+                <Button Content="Generar Reporte" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,120,0,0" Click="RegistrosClick" Background="Transparent" BorderThickness="0" Foreground="Azure" FontWeight="Bold"/>
+                <!-- Agrega más botones según tus necesidades -->
+
+                <!-- Botón para contraer/expandir el menú -->
+                <Button Content="≡" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10" Click="ToggleMenu_Click" Width="20" Background="Cyan" BorderThickness="0">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="5">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                
+                
+            </Grid>
+
+            <!-- Contenido específico de la ventana -->
+            <Frame x:Name="mainFrame" Grid.Column="1"/>
+        </Grid>
+    </Grid>
+</Window>
