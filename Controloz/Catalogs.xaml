@@ -7,6 +7,28 @@
       mc:Ignorable="d"
       Title="Catalogs">
     <Grid>
-        <TextBlock Foreground="Black" FontSize="20" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,20,0,0">Contenido de la Página 1</TextBlock>
+        <TextBlock Foreground="Black" FontSize="20" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,20,0,0">Catálogos</TextBlock>
+        
+        <!-- ComboBox para la selección -->
+        <ComboBox Name="seleccionComboBox" Width="200" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,50,0,0">
+            <!-- Agrega opciones al ComboBox según tus necesidades -->
+            <ComboBoxItem Content="Opción 1"/>
+            <ComboBoxItem Content="Opción 2"/>
+            <ComboBoxItem Content="Opción 3"/>
+        </ComboBox>
+
+        <!-- DataGrid para la tabla -->
+        <DataGrid AutoGenerateColumns="False" CanUserAddRows="False" HorizontalAlignment="Center" VerticalAlignment="Center" Height="200" Margin="0,50,0,0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="No." Binding="{Binding No}" Width="*" />
+                <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" Width="*" />
+                <DataGridTextColumn Header="Registro" Binding="{Binding Registro}" Width="*" />
+                <DataGridTextColumn Header="Editar" Binding="{Binding Editar}" Width="*" />
+                <DataGridTextColumn Header="Eliminar" Binding="{Binding Eliminar}" Width="*" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!-- Botón 'Generar Registro' -->
+        <Button Content="Generar Registro" Width="150" Height="30" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,50,0,0"/>
     </Grid>
 </Page>

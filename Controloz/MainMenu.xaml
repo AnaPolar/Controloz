@@ -21,8 +21,19 @@
             <Grid Name="menuGrid" Width="200" Background="#2C3E50" VerticalAlignment="Stretch">
                 <!-- Contenido del menú aquí -->
                 <Button Content="Catálogos" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,40,0,0" Click="CatalogosClick" Background="Transparent" BorderThickness="0" Foreground="Azure" FontWeight="Bold"/>
-                <Button Content="Registros" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,80,0,0" Click="RegistrosClick" Background="Transparent" BorderThickness="0" Foreground="Azure" FontWeight="Bold"/>
-                <Button Content="Generar Reporte" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,120,0,0" Click="RegistrosClick" Background="Transparent" BorderThickness="0" Foreground="Azure" FontWeight="Bold"/>
+                
+                <TextBlock FontSize="18" FontWeight="Bold" FontStyle="Italic" Margin="40,80,0,0" Foreground="AliceBlue">
+                    Registros
+                </TextBlock>
+                <Button Content="Visualizar Registros" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,120,0,0" Click="RegistrosClick" Background="Transparent" BorderThickness="0" Foreground="Azure" FontWeight="Bold"/>
+                <Button Content="Generar Registro" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,140,0,0" Click="NuevoRegistroClick" Background="Transparent" BorderThickness="0" Foreground="Azure" FontWeight="Bold"/>
+                <!-- <Button Content="Generar Reporte" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,180,0,0" Click="RegistrosClick" Background="Transparent" BorderThickness="0" Foreground="Azure" FontWeight="Bold"/>-->
+                
+                <TextBlock FontSize="18" FontWeight="Bold" FontStyle="Italic" Margin="40,220,0,0" Foreground="AliceBlue">
+                    Opciones...
+                </TextBlock>
+                <Button Content="Configurar utilidad" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,260,0,0" Click="RegistrosClick" Background="Transparent" BorderThickness="0" Foreground="Azure" FontWeight="Bold"/>
+                <Button Content="Configurar perfil" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,280,0,0" Click="PerfilClick" Background="Transparent" BorderThickness="0" Foreground="Azure" FontWeight="Bold"/>
                 <!-- Agrega más botones según tus necesidades -->
 
                 <!-- Botón para contraer/expandir el menú -->
