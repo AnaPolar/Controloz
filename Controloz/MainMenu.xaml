@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="MainMenu" Height="450" Width="800" ResizeMode="NoResize">
     <Grid>
-        <!-- Fondo de la ventana con la imagen -->
-        <Image Source="RutaDeTuImagenDeFondo.jpg" Stretch="UniformToFill"/>
+        <!-- Fondo de la ventana con la imagen (opcional)-->
+        <!-- <Image Source="RutaDeTuImagenDeFondo.jpg" Stretch="UniformToFill"/> -->
 
         <!-- Contenido de la ventana -->
         <Grid>
@@ -32,7 +32,7 @@
                 <TextBlock FontSize="18" FontWeight="Bold" FontStyle="Italic" Margin="40,220,0,0" Foreground="AliceBlue">
                     Opciones...
                 </TextBlock>
-                <Button Content="Configurar utilidad" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,260,0,0" Click="RegistrosClick" Background="Transparent" BorderThickness="0" Foreground="Azure" FontWeight="Bold"/>
+                <Button Content="Configurar utilidad" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,260,0,0" Click="UtilidadClick" Background="Transparent" BorderThickness="0" Foreground="Azure" FontWeight="Bold"/>
                 <Button Content="Configurar perfil" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,280,0,0" Click="PerfilClick" Background="Transparent" BorderThickness="0" Foreground="Azure" FontWeight="Bold"/>
                 <!-- Agrega más botones según tus necesidades -->
 

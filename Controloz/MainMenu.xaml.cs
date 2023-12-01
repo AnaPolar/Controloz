@@ -31,6 +31,11 @@ public partial class MainMenu : Window
     {
         MostrarPaginaRegistro();
     }
+    
+    private void UtilidadClick(object sender, RoutedEventArgs e)
+    {
+        MostrarUtilidad();
+    }
 
     private void ToggleMenu_Click(object sender, RoutedEventArgs e)
     {
@@ -75,10 +80,10 @@ public partial class MainMenu : Window
         mainFrame.Navigate(new RegisterRecord());
     }
     
-    private void MostrarPagi()
+    private void MostrarUtilidad()
     {
         // Muestra Register Records en el Frame
-        mainFrame.Navigate(new RegisterRecord());
+        mainFrame.Navigate(new Utility());
     }
     
     private void PerfilClick(object sender, RoutedEventArgs e)
