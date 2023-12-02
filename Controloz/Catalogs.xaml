@@ -12,10 +12,14 @@
         <!-- ComboBox para la selección -->
         <ComboBox Name="seleccionComboBox" Width="200" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,50,0,0">
             <!-- Agrega opciones al ComboBox según tus necesidades -->
-            <ComboBoxItem Content="Opción 1"/>
-            <ComboBoxItem Content="Opción 2"/>
-            <ComboBoxItem Content="Opción 3"/>
+            <ComboBoxItem Content="Empresa"/>
+            <ComboBoxItem Content="Sucursal"/>
+            <ComboBoxItem Content="Proveedor"/>
+            <ComboBoxItem Content="Ciudad"/>
+            <ComboBoxItem Content="Tipo de movimiento"/>
+            <ComboBoxItem Content="Tipo de persona"/>
         </ComboBox>
+
 
         <!-- DataGrid para la tabla -->
         <DataGrid AutoGenerateColumns="False" CanUserAddRows="False" HorizontalAlignment="Center" VerticalAlignment="Center" Height="200" Margin="0,50,0,0">
@@ -29,6 +33,6 @@
         </DataGrid>
 
         <!-- Botón 'Generar Registro' -->
-        <Button Content="Generar Registro" Width="150" Height="30" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,50,0,0"/>
+        <Button Content="Generar Registro" Width="150" Height="30" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,50,0,0" Click="MostrarVentanaButton_Click"/>
     </Grid>
 </Page>
