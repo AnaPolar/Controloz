@@ -7,6 +7,78 @@
       mc:Ignorable="d"
       Title="RegisterRecord">
     <Grid>
-        <TextBlock Foreground="Black" FontSize="20" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,20,0,0">Generar  Registro</TextBlock>
+        <TextBlock Foreground="Black" FontSize="20" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,20,0,0">Nuevo Registro || Factura</TextBlock>
+
+        <Grid Margin="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/> <!-- Nueva columna -->
+            </Grid.ColumnDefinitions>
+
+            <!-- Columna 1 -->
+            <StackPanel Grid.Column="0" Margin="0,20,20,0">
+                <Label Content="Fecha"/>
+                <DatePicker Width="200" Height="25"/>
+
+                <Label Content="Empresa"/>
+                <TextBox Width="200" Height="25"/>
+            </StackPanel>
+
+            <!-- Columna 2 -->
+            <StackPanel Grid.Column="1">
+                <StackPanel Orientation="Horizontal" Margin="0,40,0,10">
+                    <Label Content="Importe"/>
+                    <TextBox Width="150" Height="25"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,10">
+                    <Label Content="Devolución"/>
+                    <TextBox Width="150" Height="25"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,10">
+                    <Label Content="Concepto"/>
+                    <TextBox Width="450" Height="25"/>
+                </StackPanel>
+
+                <!-- Otras etiquetas e inputs según sea necesario -->
+            </StackPanel>
+
+            <!-- Nueva Columna 3 -->
+            <StackPanel Grid.Column="2" Margin="0,20,0,0">
+                <Label Content="Tipo de Movimiento"/>
+                <ComboBox Width="200" Height="25">
+                    <ComboBoxItem Content="Entrada"/>
+                    <ComboBoxItem Content="Salida"/>
+                </ComboBox>
+
+                <Label Content="Proveedor"/>
+                <ComboBox Width="200" Height="25">
+                    <ComboBoxItem Content="..."/>
+                </ComboBox>
+            </StackPanel>
+        </Grid>
+
+        <!-- Tabla de Registros Temporales -->
+        <DataGrid AutoGenerateColumns="False" CanUserAddRows="False" HorizontalAlignment="Stretch" Margin="0,210,0,0" VerticalAlignment="Top" Height="150">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="No." Binding="{Binding No}" Width="*" />
+                <DataGridTextColumn Header="No. de Factura" Binding="{Binding NoFactura}" Width="*" />
+                <DataGridTextColumn Header="Tipo de Movimiento" Binding="{Binding TipoMovimiento}" Width="*" />
+                <DataGridTextColumn Header="Proveedor" Binding="{Binding Proveedor}" Width="*" />
+                <DataGridTextColumn Header="Devolución" Binding="{Binding Devolucion}" Width="*" />
+                <DataGridTextColumn Header="Importe" Binding="{Binding Importe}" Width="*" />
+                <DataGridTextColumn Header="Concepto" Binding="{Binding Concepto}" Width="*" />
+                <DataGridTextColumn Header="Editar" Width="*" />
+                <DataGridTextColumn Header="Eliminar" Width="*" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!-- Botones Agregar y Siguiente -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,20,20,20">
+            <Button Content="Agregar" Width="100" Height="30" Margin="0,0,10,0"/>
+            <Button Content="Siguiente" Width="100" Height="30"/>
+        </StackPanel>
     </Grid>
 </Page>

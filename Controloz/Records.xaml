@@ -6,11 +6,13 @@
       xmlns:local="clr-namespace:Controloz"
       mc:Ignorable="d"
       Title="Records">
+  
     <Grid>
         <TextBlock Foreground="Black" FontSize="20" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,20,0,0">Visualizar Registros</TextBlock>
 
         <!-- Tabla -->
-        <DataGrid AutoGenerateColumns="False" CanUserAddRows="False" HorizontalAlignment="Stretch" Margin="10,50,10,50">
+        <DataGrid x:Name="myDataGrid" AutoGenerateColumns="False" CanUserAddRows="False" HorizontalAlignment="Stretch" Margin="10,50,10,50" SelectionMode="Single" MouseDoubleClick="DataGrid_MouseDoubleClick">
+            <!-- Columnas del DataGrid -->
             <DataGrid.Columns>
                 <DataGridTextColumn Header="No." Binding="{Binding No}" Width="*" />
                 <DataGridTextColumn Header="Empresa" Binding="{Binding Empresa}" Width="*" />
@@ -18,8 +20,6 @@
                 <DataGridTextColumn Header="No. de Registros" Binding="{Binding NoRegistros}" Width="*" />
             </DataGrid.Columns>
         </DataGrid>
-
-        <!-- Botón 'Generar Registro' -->
-        <Button Content="Generar Registro" Width="150" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,10,10"/>
+        
     </Grid>
 </Page>

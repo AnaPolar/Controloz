@@ -70,8 +70,8 @@ public partial class MainMenu : Window
 
     private void MostrarVisualizarRegistros()
     {
-        // Muestra la página 2 en el Frame
-        mainFrame.Navigate(new Records());
+        // Pasa la referencia del Frame a la página Records
+        mainFrame.Navigate(new Records(mainFrame));
     }
     
     private void MostrarPaginaRegistro()
@@ -91,4 +91,6 @@ public partial class MainMenu : Window
         // Muestra Register Records en el Frame
         mainFrame.Navigate(new Profile());
     }
+    
+
 }

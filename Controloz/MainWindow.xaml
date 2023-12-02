@@ -6,7 +6,9 @@
         xmlns:local="clr-namespace:Controloz"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize">
+    
     <Grid>
+
         <Grid.ColumnDefinitions>
         <!-- Columna izquierda con la imagen -->
         <ColumnDefinition Width="*" />
@@ -43,5 +45,6 @@
             <!-- Botón de inicio de sesión -->
             <Button Grid.Row="3" Content="Iniciar Sesión" Width="100" Height="30" HorizontalAlignment="Center" Margin="0,20,0,0" Click="LoginClick"/>
         </Grid>
+     
     </Grid>
 </Window>
