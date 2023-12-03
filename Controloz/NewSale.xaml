@@ -1,0 +1,64 @@
+<Page x:Class="Controloz.NewSale"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d"
+      Title="NewSale">
+
+    <Grid Margin="20">
+
+        <!-- Título -->
+        <TextBlock Foreground="Black" FontSize="20" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,0,0,20">Nuevo || Venta</TextBlock>
+
+        <!-- Sección de Importe de la Venta -->
+        <StackPanel Orientation="Horizontal" Margin="0,100,0,20">
+            <Label Content="Importe de la Venta" VerticalAlignment="Center"/>
+            <TextBox Width="150" Height="25" Margin="10,0,0,0"/>
+            <Button Content="Agregar" Width="80" Height="25" Margin="10,0,0,0"/>
+        </StackPanel>
+
+        <!-- Sección de Fecha Registrada -->
+        <StackPanel Margin="160,20,0,20">
+            <Label Content="Fecha Registrada" Margin="360,20,0,20"/>
+            <!-- Puedes usar un control DatePicker aquí para seleccionar la fecha -->
+            <TextBlock Text="Fecha Actual" Width="150" Height="25" VerticalAlignment="Center" Margin="160,20,0,20"/>
+        </StackPanel>
+
+        <!-- Sección de Totales -->
+        <StackPanel Orientation="Horizontal" Margin="0,20,0,20">
+            <StackPanel Margin="0,20,0,0">
+                <Label Content="Total de Compras"/>
+                <TextBox Width="150" Height="25"/>
+            </StackPanel>
+            <StackPanel Margin="20,20,0,0">
+                <Label Content="Utilidad Bruta"/>
+                <TextBox Width="150" Height="25"/>
+            </StackPanel>
+            <StackPanel Margin="20,20,0,0">
+                <Label Content="Gastos"/>
+                <TextBox Width="150" Height="25"/>
+            </StackPanel>
+        </StackPanel>
+
+        <!-- Sección de Utilidad Neta -->
+        <StackPanel Orientation="Horizontal" Margin="0,60,0,20">
+            <StackPanel Margin="0,60,0,20">
+                <Label Content="Utilidad Neta"/>
+                <TextBox Width="150" Height="25"/>
+            </StackPanel>
+            <StackPanel Margin="20,60,0,0">
+                <Label Content="% Esperado"/>
+                <TextBox Width="150" Height="25"/>
+            </StackPanel>
+            <StackPanel Margin="20,60,0,0">
+                <Label Content="Real"/>
+                <TextBox Width="150" Height="25"/>
+            </StackPanel>
+        </StackPanel>
+
+        <!-- Botón de Guardar -->
+        <Button Content="Guardar" Width="100" Height="30" HorizontalAlignment="Right" Margin="0,140,0,0"/>
+    </Grid>
+</Page>
+
