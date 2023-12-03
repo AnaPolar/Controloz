@@ -56,6 +56,6 @@
         </StackPanel>
 
         <!-- Botón de Guardar -->
-        <Button Content="Guardar" Width="100" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,20,0,0" Click="GuardarClick"/>
+        <Button Content="Guardar" Width="100" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="400,20,0,0" Click="GuardarClick"/>
     </Grid>
 </Window>
